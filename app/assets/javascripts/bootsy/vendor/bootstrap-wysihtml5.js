@@ -48,7 +48,7 @@
                     "<div class='modal-dialog modal-vertical-centered'>" +
                       "<div class='modal-content'>" +
                         "<div class='modal-header'>" +
-                          "<div class'modal-msg'>" +
+                          "<div class='modal-msg'>" +
                               "<span class='big-subject'>" + locale.link.insert + "</span>" +
                           "</div>" +
                           "<div class='exit-wrapper' data-dismiss='modal'>" +
