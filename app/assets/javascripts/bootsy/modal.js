@@ -62,6 +62,18 @@ Bootsy.Modal = function(area) {
       formData.append('image[image_file]', file, file.name);
     }
 
+    var isValidate = Grepp.isValidateFiles(file);
+    if (isValidate == "size") {      
+        swal({
+          title: '파일크기가 너무 큽니다!',
+          text: '1MB 이하의 파일을 올려주세요.',
+          type: 'error',
+          confirmButtonClass: 'btn-red',
+          buttonsStyling : false
+        });
+        return;
+    };
+
     if (fileURLInput) {
       fileURL = fileURLInput.value;
     } else {
