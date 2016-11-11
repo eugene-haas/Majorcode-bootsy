@@ -74,7 +74,8 @@ Bootsy.Modal = function(area) {
         });
         this.hideRefreshButton();
         this.hideEmptyAlert();
-        this.hideGalleryLoadingAnimation();
+        //this.hideGalleryLoadingAnimation();
+        $(".bootsy-upload-loader").fadeOut(200);
         return;
     } else if (isValidate == "type") {
       swal({
@@ -86,7 +87,8 @@ Bootsy.Modal = function(area) {
       });
       this.hideRefreshButton();
       this.hideEmptyAlert();
-      this.hideGalleryLoadingAnimation();
+      //this.hideGalleryLoadingAnimation();
+      $(".bootsy-upload-loader").fadeOut(200);
       return;
     }
 
