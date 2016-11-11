@@ -4,11 +4,14 @@
     <div class="modal-dialog modal-vertical-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">
-            <span aria-hidden="true">&times;</span>
-          </button>
-
-          <h4 class="modal-title"><%= t 'bootsy.image.p' %></h4>
+          <div class="modal-msg">
+            <span class="big-subject">
+              <%= t 'bootsy.image.p' %>            
+            </span>            
+          </div>
+          <div class="exit-wrapper" data-dismiss="modal">
+            <span class="exit"></span>
+          </div>
         </div>
 
         <div class="modal-body">
