@@ -74,6 +74,7 @@ Bootsy.Modal = function(area) {
         });
         this.hideRefreshButton();
         this.hideEmptyAlert();
+        this.hideGalleryLoadingAnimation();
         return;
     } else if (isValidate == "type") {
       swal({
@@ -85,6 +86,7 @@ Bootsy.Modal = function(area) {
       });
       this.hideRefreshButton();
       this.hideEmptyAlert();
+      this.hideGalleryLoadingAnimation();
       return;
     }
 
