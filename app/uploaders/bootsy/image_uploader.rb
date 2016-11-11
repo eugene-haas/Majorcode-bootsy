@@ -9,7 +9,7 @@ module Bootsy
     end
 
     process resize_to_limit: [1160, 2000]
-
+=begin
     version :large do
       process resize_to_fit: [
         Bootsy.large_image[:width], Bootsy.large_image[:height]
@@ -21,7 +21,7 @@ module Bootsy
         Bootsy.medium_image[:width], Bootsy.medium_image[:height]
       ]
     end
-
+=end
     version :small do
       process resize_to_fit: [
         Bootsy.small_image[:width], Bootsy.small_image[:height]
