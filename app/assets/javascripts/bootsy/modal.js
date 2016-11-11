@@ -62,6 +62,7 @@ Bootsy.Modal = function(area) {
       formData.append('image[image_file]', file, file.name);
     }
 
+    // By James - image validate check
     var isValidate = Grepp.isValidateFiles(file);
     if (isValidate == "size") {      
         swal({
@@ -71,8 +72,22 @@ Bootsy.Modal = function(area) {
           confirmButtonClass: 'btn-red',
           buttonsStyling : false
         });
+        this.hideRefreshButton();
+        this.hideEmptyAlert();
         return;
-    };
+    } else if (isValidate == "type") {
+      swal({
+        title: '지원하지 않는 파일 형식입니다.!',
+        text: '.jpeg(.jpg), .gif, .png, 파일만 지원 됩니다.',
+        type: 'error',
+        confirmButtonClass: 'btn-red',
+        buttonsStyling : false
+      });
+      this.hideRefreshButton();
+      this.hideEmptyAlert();
+      return;
+    }
+
 
     if (fileURLInput) {
       fileURL = fileURLInput.value;
