@@ -44,20 +44,26 @@
             var size = (options && options.size) ? ' btn-'+options.size : '';
             return "<li>" +
               "<div class='bootstrap-wysihtml5-insert-link-modal modal fade' tabindex='-1' role='dialog' aria-hidden='true'>" +
-                "<div class='modal-dialog'>" +
-                  "<div class='modal-content'>" +
-                    "<div class='modal-header'>" +
-                      "<button type='button' class='close' data-dismiss='modal' aria-hidden='true'>&times;</button>" +
-                      "<h3 class='modal-title'>" + locale.link.insert + "</h3>" +
+                "<div class='vertical-alignment-helper'>" +
+                    "<div class='modal-dialog modal-vertical-centered'>" +
+                      "<div class='modal-content'>" +
+                        "<div class='modal-header'>" +
+                          "<div class='modal-msg'>" +
+                              "<span class='big-subject'>" + locale.link.insert + "</span>" +
+                          "</div>" +
+                          "<div class='exit-wrapper' data-dismiss='modal'>" +
+                            "<span class='exit'></span>" +
+                          "</div>" +
+                        "</div>" +
+                        "<div class='modal-body'>" +
+                          "<input value='http://' class='bootstrap-wysihtml5-insert-link-url form-control input-lg'>" +
+                        "</div>" +
+                        "<div class='modal-footer'>" +
+                          "<a href='#' class='btn btn-default' data-dismiss='modal'>" + locale.link.cancel + "</a>" +
+                          "<a href='#' class='btn btn-primary' data-dismiss='modal'>" + locale.link.insert + "</a>" +
+                        "</div>" +
+                      "</div>" +
                     "</div>" +
-                    "<div class='modal-body'>" +
-                      "<input value='http://' class='bootstrap-wysihtml5-insert-link-url form-control input-lg'>" +
-                    "</div>" +
-                    "<div class='modal-footer'>" +
-                      "<a href='#' class='btn btn-default' data-dismiss='modal'>" + locale.link.cancel + "</a>" +
-                      "<a href='#' class='btn btn-primary' data-dismiss='modal'>" + locale.link.insert + "</a>" +
-                    "</div>" +
-                  "</div>" +
                 "</div>" +
               "</div>" +
               "<a class='btn btn-default " + size + "' data-wysihtml5-command='createLink' title='" + locale.link.insert + "' tabindex='-1'><i class='glyphicon glyphicon-share'></i></a>" +
