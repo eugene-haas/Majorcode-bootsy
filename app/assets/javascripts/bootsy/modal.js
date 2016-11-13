@@ -73,7 +73,6 @@ Bootsy.Modal = function(area) {
           buttonsStyling : false
         });
         this.hideRefreshButton();
-        this.hideEmptyAlert();
         //this.hideGalleryLoadingAnimation();
         $(".bootsy-upload-loader").fadeOut(200);
         return;
@@ -86,7 +85,6 @@ Bootsy.Modal = function(area) {
         buttonsStyling : false
       });
       this.hideRefreshButton();
-      this.hideEmptyAlert();
       //this.hideGalleryLoadingAnimation();
       $(".bootsy-upload-loader").fadeOut(200);
       return;
