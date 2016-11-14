@@ -61,7 +61,7 @@ Bootsy.Modal = function(area) {
     if (file) {
       formData.append('image[image_file]', file, file.name);    
       // By James - image validate check
-      var limitSize = 5;
+      var limitSize = 10;
       var isValidate = Grepp.isValidateFiles(file, limitSize);
       if (isValidate == "size") {
           swal({
