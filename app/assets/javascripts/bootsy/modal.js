@@ -59,15 +59,25 @@ Bootsy.Modal = function(area) {
       event.target.querySelector('input[name="authenticity_token"]').value);
 
     if (file) {
-      formData.append('image[image_file]', file, file.name);
-    }
-
-    // By James - image validate check
-    var isValidate = Grepp.isValidateFiles(file);
-    if (isValidate == "size") {      
+      formData.append('image[image_file]', file, file.name);    
+      // By James - image validate check
+      var isValidate = Grepp.isValidateFiles(file);
+      if (isValidate == "size") {      
+          swal({
+            title: '파일크기가 너무 큽니다!',
+            text: '1MB 이하의 파일을 올려주세요.',
+            type: 'error',
+            confirmButtonClass: 'btn-red',
+            buttonsStyling : false
+          });
+          this.hideRefreshButton();
+          //this.hideGalleryLoadingAnimation();
+          $(".bootsy-upload-loader").fadeOut(200);
+          return;
+      } else if (isValidate == "type") {
         swal({
-          title: '파일크기가 너무 큽니다!',
-          text: '1MB 이하의 파일을 올려주세요.',
+          title: '지원하지 않는 파일 형식입니다.!',
+          text: '.jpeg(.jpg), .gif, .png, 파일만 지원 됩니다.',
           type: 'error',
           confirmButtonClass: 'btn-red',
           buttonsStyling : false
@@ -76,19 +86,10 @@ Bootsy.Modal = function(area) {
         //this.hideGalleryLoadingAnimation();
         $(".bootsy-upload-loader").fadeOut(200);
         return;
-    } else if (isValidate == "type") {
-      swal({
-        title: '지원하지 않는 파일 형식입니다.!',
-        text: '.jpeg(.jpg), .gif, .png, 파일만 지원 됩니다.',
-        type: 'error',
-        confirmButtonClass: 'btn-red',
-        buttonsStyling : false
-      });
-      this.hideRefreshButton();
-      //this.hideGalleryLoadingAnimation();
-      $(".bootsy-upload-loader").fadeOut(200);
-      return;
+      }
     }
+
+    
 
 
     if (fileURLInput) {
