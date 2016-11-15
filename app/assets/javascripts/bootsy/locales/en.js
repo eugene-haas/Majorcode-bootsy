@@ -4,12 +4,14 @@
 (function($){
   $.fn.wysihtml5.locale['en'] = {
     font_styles: {
+      title: "Font style",
       normal: 'Normal text',
       h1: 'Heading 1',
       h2: 'Heading 2',
       h3: 'Heading 3'
     },
     emphasis: {
+      title: "Font weight",
       bold: 'Bold',
       italic: 'Italic',
       underline: 'Underline',

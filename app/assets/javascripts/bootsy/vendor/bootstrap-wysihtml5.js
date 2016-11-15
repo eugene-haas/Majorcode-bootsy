@@ -59,8 +59,8 @@
                           "<input value='http://' class='bootstrap-wysihtml5-insert-link-url form-control input-lg'>" +
                         "</div>" +
                         "<div class='modal-footer'>" +
-                          "<a href='#' class='btn btn-default' data-dismiss='modal'>" + locale.link.cancel + "</a>" +
-                          "<a href='#' class='btn btn-primary' data-dismiss='modal'>" + locale.link.insert + "</a>" +
+                          "<a href='#' class='btn-codly small_thin gray' data-dismiss='modal'>" + locale.link.cancel + "</a>" +
+                          "<a href='#' class='btn-codly small green' data-dismiss='modal'>" + locale.link.insert + "</a>" +
                         "</div>" +
                       "</div>" +
                     "</div>" +
