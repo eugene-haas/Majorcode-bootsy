@@ -8,10 +8,10 @@ module Bootsy
       "#{Bootsy.store_dir}/#{model.class.to_s.underscore}/#{model.id}"
     end
 
-    process resize_to_limit: [974, 2000]
+    process resize_to_limit: [1000, 2000]
 
     version :large do
-      process resize_to_fit: [487, 1000]
+      process resize_to_fit: [500, 1000]
     end
 
 =begin
