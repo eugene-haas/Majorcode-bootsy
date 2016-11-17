@@ -333,4 +333,5 @@ body.bootsy_text_area.form-control {
   border: none;
   -webkit-box-shadow: none;
   box-shadow: none;
+  min-width: 0;
 }
