@@ -60,7 +60,7 @@
                         "</div>" +
                         "<div class='modal-footer'>" +
                           "<a href='#' class='btn-codly small_thin gray' data-dismiss='modal'>" + locale.link.cancel + "</a>" +
-                          "<a href='#' class='btn-codly small green' data-dismiss='modal'>" + locale.link.insert + "</a>" +
+                          "<a href='#' class='btn-primary btn-codly small green' data-dismiss='modal'>" + locale.link.insert + "</a>" +
                         "</div>" +
                       "</div>" +
                     "</div>" +
