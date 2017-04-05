@@ -2559,7 +2559,10 @@ rangy.createModule("DomUtil", function(api, module) {
             r1.setStart(textNode, 0);
             r2.setEnd(textNode, 2);
             sel.addRange(r1);
-            sel.addRange(r2);
+            //sel.addRange(r2);
+            //이미 존재하는 selction에 range를 추가하는건 크롬에서 버그가 있어 금지를 시켰음.
+            //여러개를 드래그하는 기능을 제공하는지 안하는지를 체크하는것 같은데,
+            //해결책을 모르기때문에 제공하지 않게 하고, addRange를 안하는걸로 변경함
 
             selectionSupportsMultipleRanges = (sel.rangeCount == 2);
 
