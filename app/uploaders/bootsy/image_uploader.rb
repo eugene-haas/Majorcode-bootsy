@@ -8,7 +8,7 @@ module Bootsy
       "#{Bootsy.store_dir}/#{model.class.to_s.underscore}/#{model.id}"
     end
 
-    process resize_to_limit: [960, 2000]
+    process resize_to_limit: [960, 5000]
 
     version :large do
       process resize_to_fit: [480, 1000]
