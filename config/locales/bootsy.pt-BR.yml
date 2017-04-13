@@ -13,6 +13,7 @@ pt-BR:
     image:
       s: Imagem
       p: Imagens
+      posision_select: select position
       size: Tamanho
       large: Grande
       medium: Médio

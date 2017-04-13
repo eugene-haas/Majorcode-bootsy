@@ -3,13 +3,25 @@
     data: { toggle: 'dropdown' } %>
 
   <ul class="dropdown-menu" role="menu">
-    <li role="presentation" class="dropdown-header"><%= t 'bootsy.image.size' %></li>
+    <li role="presentation" class="dropdown-header"><%= t 'bootsy.image.posision_select' %></li>
+        
+    
+    <% [:left, :right, :inline].each do |position| %>
+      <li role="presentation">
+        <%= link_to '#', class: 'insert', tabindex: '-1', role: 'menuitem',
+          data: { image_size: 'original', position: position.to_s} do %>
+          <%= t position, scope: 'bootsy.image.position' %>
+        <% end %>
+      </li>
+    <% end %>
+    
 
+    
+<!--
     <% Bootsy.image_versions_available.each do |size| %>
       <li role="presentation" class="dropdown dropdown-submenu">
         <%= link_to '#', tabindex: '-1', role: 'menuitem', data: { toggle: 'dropdown' } do %>
           <i class="icon-picture"></i>
-
           <%= t size, scope: 'bootsy.image' %>
         <% end %>
 
@@ -23,9 +35,10 @@
             </li>
           <% end %>
         </ul>
+
       </li>
     <% end %>
-
+-->
     <% if Bootsy.allow_destroy %>
       <li role="presentation" class="divider"></li>
 

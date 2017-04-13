@@ -13,6 +13,7 @@ en:
     image:
       s: Image
       p: Images
+      posision_select: select position
       size: Size
       large: Large
       medium: Medium

@@ -10,11 +10,11 @@ module Bootsy
 
     process resize_to_limit: [960, 5000]
 
+=begin
     version :large do
       process resize_to_fit: [480, 2500]
     end
 
-=begin
     version :large do
       process resize_to_fit: [
         Bootsy.large_image[:width], Bootsy.large_image[:height]
