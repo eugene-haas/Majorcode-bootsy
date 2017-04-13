@@ -11,7 +11,7 @@ module Bootsy
     process resize_to_limit: [960, 5000]
 
     version :large do
-      process resize_to_fit: [480, 1000]
+      process resize_to_fit: [480, 2500]
     end
 
 =begin
